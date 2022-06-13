@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    internal class Funcionario
+    public class Funcionario
     {
-        public string nome;
-        public string cpf;
-        public double salario;
+        private string nome;
+        private string cpf;
+        private double salario;
 
-        public double getBonificacao()
+        public string Nome { get => nome; set => nome = value; }
+        public string Cpf { get => cpf; set => cpf = value; }
+        public double Salario { get => salario; set => salario = value; }
+
+        public virtual double getBonificacao()
         {
-            return salario * 0.1;
+            return Salario * 0.1;
         }
+
 
     }
 }
